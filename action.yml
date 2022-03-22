@@ -1,4 +1,4 @@
-name: "Use S3cmd"
+name: "Use S3cmd - (Add Vultr support)"
 description: "Use S3cmd cli to interact with s3 object storage"
 branding:
   icon: "award"
