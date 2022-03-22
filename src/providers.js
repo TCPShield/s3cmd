@@ -27,7 +27,7 @@ const providers = {
   }),
   vultr: ({ region = 'ewr-1', access_key = '', secret_key = ''}) => ({
     bucket_location: region,
-    host_base: `${region}.vultrobjects.com.com`,
+    host_base: `${region}.vultrobjects.com`,
     host_bucket: `%(bucket)s.${region}.vultrobjects.com`,
     website_endpoint: `http://%(bucket)s.website-${region}.vultrobjects.com/`,
     access_key,
