@@ -453,8 +453,16 @@ const providers = {
     website_endpoint: `http://%(bucket)s.website-${region}.linodeobjects.com/`,
     access_key,
     secret_key,
-  })
-}
+  }),
+  vultr: ({ region = 'ewr-1', access_key = '', secret_key = ''}) => ({
+    bucket_location: region,
+    host_base: `${region}.vultrobjects.com.com`,
+    host_bucket: `%(bucket)s.${region}.vultrobjects.com`,
+    website_endpoint: `http://%(bucket)s.website-${region}.vultrobjects.com/`,
+    access_key,
+    secret_key,
+  }),
+};
 
 const makeConf = (provider) => {
   const opts = { ...defaults, ...provider }
@@ -465,7 +473,6 @@ module.exports = {
   providers,
   makeConf
 }
-
 
 
 /***/ }),
